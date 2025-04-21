@@ -1,3 +1,52 @@
-body {
-    background-color: skyblue;
+@import "tailwindcss";
+::placeholder {
+    color: white !important;
+    opacity: 0.7 !important;
+}
+
+/* Pour Firefox */
+::-moz-placeholder {
+    color: white !important;
+    opacity: 0.7 !important;
+}
+
+/* Pour Internet Explorer */
+:-ms-input-placeholder {
+    color: white !important;
+    opacity: 0.7 !important;
+}
+
+/* Pour Microsoft Edge */
+::-ms-input-placeholder {
+    color: white !important;
+    opacity: 0.7 !important;
+}
+
+/* Pour les modes sombre, assurer que les champs ont un fond sombre */
+.dark input, .dark textarea {
+    background-color: #374151 !important;
+    color: white !important;
+}
+
+/* Animation pour le spinner */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Animation pour le bouton */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
